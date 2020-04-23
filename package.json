@@ -1,0 +1,49 @@
+{
+    "author": "Matheus Castiglioni <matheushcastiglioni@gmail.com>",
+    "bugs": {
+        "url": "https://gitlab.com/mahenrique94/my-instagram-api/issues"
+    },
+    "description": "A minimalist Instagram API version",
+    "devDependencies": {
+        "@commitlint/cli": "^8.3.5",
+        "@commitlint/config-conventional": "^8.3.4",
+        "eslint": "^6.8.0",
+        "eslint-plugin-jest": "^23.8.2",
+        "eslint-plugin-prettier": "^3.1.3",
+        "husky": "^4.2.5",
+        "jest": "^25.4.0",
+        "nodemon": "^2.0.3",
+        "prettier": "^2.0.5"
+    },
+    "homepage": "https://gitlab.com/mahenrique94/my-instagram-api#readme",
+    "keywords": [
+        "Node",
+        "NodeJS"
+    ],
+    "license": "ISC",
+    "main": "./src/index.js",
+    "name": "my-instagram-api",
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@gitlab.com/mahenrique94/my-instagram-api.git"
+    },
+    "scripts": {
+        "ci": "npm run lint && npm t",
+        "code:check": "prettier --config ./.prettierrc --check './src/**/*.js'",
+        "code:format": "prettier --config ./.prettierrc --write './src/**/*.js'",
+        "commitlint": "commitlint -E HUSKY_GIT_PARAMS",
+        "dev": "nodemon --exec \"npm run lerna:dev\"",
+        "jslint": "eslint .",
+        "jslint:fix": "eslint . --fix",
+        "lint": "npm run jslint",
+        "lint:fix": "npm run jslint:fix",
+        "stack:dev": "docker-compose up -d",
+        "stack:dev:build": "docker-compose build",
+        "stack:dev:clean": "docker-compose rm -s -f",
+        "stack:dev:start": "docker-compose start",
+        "stack:dev:stop": "docker-compose stop",
+        "test": "jest --config './jest.config.js' --maxWorkers=2 --passWithNoTests",
+        "test:w": "npm t -- --watchAll"
+    },
+    "version": "1.0.0"
+}
