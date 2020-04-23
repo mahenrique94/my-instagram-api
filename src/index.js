@@ -1,1 +1,3 @@
-console.log('Hey')
+const bs = require('./infrastructure/bootstrap')
+
+bs()

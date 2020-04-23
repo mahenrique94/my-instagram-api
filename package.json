@@ -32,7 +32,16 @@
         "code:check": "prettier --config ./.prettierrc --check './src/**/*.js'",
         "code:format": "prettier --config ./.prettierrc --write './src/**/*.js'",
         "commitlint": "commitlint -E HUSKY_GIT_PARAMS",
-        "dev": "nodemon --exec \"npm run lerna:dev\"",
+        "db": "npm run db:drop && npm run db:create && npm run db:migrate && npm run db:seed",
+        "db:create": "sequelize db:create",
+        "db:drop": "sequelize db:drop",
+        "db:migrate": "sequelize db:migrate",
+        "db:seed": "sequelize db:seed",
+        "db:unseed": "sequelize db:seed:undo:all",
+        "db:unseed:last": "sequelize db:seed:undo",
+        "db:unmigrate": "sequelize db:migrate:undo:all",
+        "db:unmigrate:last": "sequelize db:migrate:undo",
+        "dev": "nodemon",
         "jslint": "eslint .",
         "jslint:fix": "eslint . --fix",
         "lint": "npm run jslint",
@@ -45,5 +54,17 @@
         "test": "jest --config './jest.config.js' --maxWorkers=2 --passWithNoTests",
         "test:w": "npm t -- --watchAll"
     },
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "dependencies": {
+        "@koa/cors": "^3.0.0",
+        "boom": "^7.3.0",
+        "fastest-validator": "^1.2.0",
+        "jsonwebtoken": "^8.5.1",
+        "koa": "^2.11.0",
+        "koa-bodyparser": "^4.3.0",
+        "koa-router": "^8.0.8",
+        "mysql2": "^2.1.0",
+        "sequelize": "^5.21.6",
+        "sequelize-cli": "^5.5.1"
+    }
 }

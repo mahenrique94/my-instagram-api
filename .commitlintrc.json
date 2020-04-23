@@ -5,13 +5,18 @@
         "subject-case": [ 2, "always", "sentence-case" ],
         "type-case": [ 2, "always", "lower-case" ],
         "type-enum": [ 2, "always", [
-            "config",
+            "build",
+            "ci",
+            "conf",
             "docs",
-            "feature",
-            "hotfix",
-            "improviment",
-            "refactor",
-            "release",
+            "feat",
+            "fix",
+            "imp",
+            "perf",
+            "ref",
+            "rel",
+            "rev",
+            "style",
             "test"
         ] ]
     }
