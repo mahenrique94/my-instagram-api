@@ -5,15 +5,14 @@ const Router = require('koa-router')
 
 const applyRoutes = require('./routes')
 
-const app = new Koa()
-const router = new Router()
-
 module.exports = () => {
     console.log('[Koa] Creating a new server')
+    const app = new Koa()
+    const router = new Router()
 
     applyRoutes(router)
 
     app.use(cors()).use(bodyParser()).use(router.routes()).use(router.allowedMethods())
 
-    app.listen(8080)
+    return app
 }

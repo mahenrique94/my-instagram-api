@@ -1,48 +1,43 @@
-'use strict';
+'use strict'
 module.exports = {
-    up: (queryInterface, Sequelize) => {
-        return queryInterface.createTable('Users', {
-            id: {
-                allowNull: false,
-                autoIncrement: true,
-                primaryKey: true,
-                type: Sequelize.INTEGER
-            },
-            name: {
-                type: Sequelize.STRING
-            },
-            username: {
-                type: Sequelize.STRING
-            },
-            website: {
-                type: Sequelize.STRING
-            },
+    down: queryInterface => queryInterface.dropTable('Users'),
+    up: (queryInterface, Sequelize) =>
+        queryInterface.createTable('users', {
             biography: {
-                type: Sequelize.STRING
-            },
-            email: {
-                type: Sequelize.STRING
-            },
-            phone: {
-                type: Sequelize.STRING
-            },
-            gender: {
-                type: Sequelize.STRING
-            },
-            picture: {
-                type: Sequelize.STRING
+                type: Sequelize.TEXT,
             },
             createdAt: {
-                allowNull: false,
-                type: Sequelize.DATE
+                type: Sequelize.DATE,
+            },
+            email: {
+                type: Sequelize.STRING(255),
+            },
+            gender: {
+                type: Sequelize.STRING(1),
+            },
+            id: {
+                type: Sequelize.UUID,
+            },
+            name: {
+                type: Sequelize.STRING(120),
+            },
+            password: {
+                type: Sequelize.STRING(255),
+            },
+            phone: {
+                type: Sequelize.STRING(30),
+            },
+            picture: {
+                type: Sequelize.STRING(255),
             },
             updatedAt: {
-                allowNull: false,
-                type: Sequelize.DATE
-            }
-        });
-    },
-    down: (queryInterface, Sequelize) => {
-        return queryInterface.dropTable('Users');
-    }
-};
+                type: Sequelize.DATE,
+            },
+            username: {
+                type: Sequelize.STRING(30),
+            },
+            website: {
+                type: Sequelize.STRING(255),
+            },
+        }),
+}

@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+    instagram_db:
+        container_name: instagram_db
+        env_file:
+            - ./docker-compose.env
+        image: mysql:5.7.27
+        networks:
+            main:
+                aliases:
+                    - instagram_db
+        ports:
+            - 3306:3306
+        restart: 'no'
+
+networks:
+    main:

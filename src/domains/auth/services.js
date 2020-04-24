@@ -1,5 +1,5 @@
-const db = require('../../db/models/')
+const repository = require('./repository')
 
 module.exports = {
-    auth: payload => db.User.findOne({ where: payload })
+    signIn: payload => repository.findOne(payload),
 }

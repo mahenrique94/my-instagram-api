@@ -1,5 +1,6 @@
 const server = require('./server')
 
 module.exports = () => {
-    server()
+    const app = server()
+    app.listen(8080)
 }
