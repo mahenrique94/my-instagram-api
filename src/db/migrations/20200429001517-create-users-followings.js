@@ -1,31 +1,25 @@
 'use strict'
 module.exports = {
-    down: queryInterface => queryInterface.dropTable('users'),
+    down: queryInterface => queryInterface.dropTable('users_followings'),
     up: (queryInterface, Sequelize) =>
-        queryInterface.createTable('users', {
+        queryInterface.createTable('users_followings', {
             created_at: {
                 type: Sequelize.DATE,
             },
             deleted_at: {
                 type: Sequelize.DATE,
             },
-            email: {
-                type: Sequelize.STRING(255),
-            },
             id: {
                 type: Sequelize.UUID,
-            },
-            password: {
-                type: Sequelize.BLOB,
-            },
-            salt: {
-                type: Sequelize.BLOB,
             },
             updated_at: {
                 type: Sequelize.DATE,
             },
-            username: {
-                type: Sequelize.STRING(30),
+            user_follower_id: {
+                type: Sequelize.UUID,
+            },
+            user_following_id: {
+                type: Sequelize.UUID,
             },
         }),
 }

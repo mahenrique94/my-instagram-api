@@ -1,5 +1,7 @@
+const env = require('../../env')
+
 const controllers = require('./controllers')
 
 module.exports = router => {
-    router.post('/v1/api/auth/sign-in', controllers.signIn)
+    router.post(`/${env.api.version}/${env.api.prefix}/auth/sign-up`, controllers.signUp)
 }

@@ -1,0 +1,11 @@
+const Validator = require('fastest-validator')
+
+module.exports = body => {
+    const v = new Validator()
+    const schema = {
+        email: { max: 255, min: 5, type: 'email' },
+        password: { max: 16, min: 8, type: 'string' },
+        username: { max: 30, min: 5, type: 'string' },
+    }
+    return v.validate(body, schema)
+}

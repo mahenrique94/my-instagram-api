@@ -14,7 +14,7 @@
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
-    "plugins": ["jest", "prettier"],
+    "plugins": ["eslint-plugin-import-helpers", "jest", "prettier"],
     "rules": {
         "array-bracket-spacing": ["error", "never"],
         "array-callback-return": "error",
@@ -43,6 +43,24 @@
             {
                 "before": false,
                 "after": true
+            }
+        ],
+        "import-helpers/order-imports": [
+            "error",
+            {
+                "alphabetize": { "ignoreCase": true, "order": "asc" },
+                "groups": [
+                    "/^../config/",
+                    ["/^../constants/", "/^./constants/"],
+                    "/^../env/",
+                    "module",
+                    ["/^../cfg/", "/^../i18n/", "/^../mocks/"],
+                    "/^../utils/",
+                    "/^../helpers/",
+                    "parent",
+                    "sibling"
+                ],
+                "newlinesBetween": "always"
             }
         ],
         "indent": [
