@@ -1,9 +1,9 @@
 const uuid = require('uuid/v4')
 
-const { createPassAndSalt } = require('../../../utils/crypt')
+const { createPasswordAndSalt } = require('../../../utils/crypt')
 
 module.exports = ({ email, password, username }) => {
-    const data = createPassAndSalt(password)
+    const data = createPasswordAndSalt(password)
     return {
         email,
         id: uuid(),

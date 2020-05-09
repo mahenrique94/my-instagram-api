@@ -30,6 +30,9 @@ module.exports = {
             updated_at: {
                 type: Sequelize.DATE,
             },
+            user_id: {
+                type: Sequelize.UUID,
+            },
             website: {
                 type: Sequelize.STRING(255),
             },
