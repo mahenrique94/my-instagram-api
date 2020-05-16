@@ -1,7 +1,4 @@
-const createResponse = require('./createResponse')
-const tryAsyncCall = require('./tryAsyncCall')
-
 module.exports = {
-    createResponse,
-    tryAsyncCall,
+    createResponse: require('./createResponse'),
+    tryAsyncCall: require('./tryAsyncCall'),
 }

@@ -6,12 +6,24 @@ services:
             - ./docker-compose.env
         image: mysql:5.7.27
         networks:
-            main:
+            my-instagram:
                 aliases:
                     - instagram_db
         ports:
             - 3306:3306
         restart: 'no'
 
+    instagram_memory_db:
+        command: redis-server --requirepass chaves
+        container_name: instagram_memory_db
+        image: redis:6.0.2
+        networks:
+            my-instagram:
+                aliases:
+                    - instagram_memory_db
+        ports:
+            - 6379:6379
+        restart: 'no'
+
 networks:
-    main:
+    my-instagram:

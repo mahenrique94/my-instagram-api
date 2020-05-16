@@ -1,5 +1,3 @@
-const signUp = require('./signUp')
-
 module.exports = {
-    signUp,
+    signUp: require('./signUp'),
 }

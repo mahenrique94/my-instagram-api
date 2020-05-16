@@ -1,5 +1,4 @@
-const removeKeys = require('./removeKeys')
-
 module.exports = {
-    removeKeys,
+    clone: require('./clone'),
+    removeKeys: require('./removeKeys'),
 }

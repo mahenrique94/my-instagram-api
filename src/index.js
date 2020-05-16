@@ -1,3 +1,1 @@
-const bs = require('./infrastructure/bootstrap')
-
-bs()
+require('./infrastructure/bootstrap')()

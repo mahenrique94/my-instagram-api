@@ -3,6 +3,9 @@ module.exports = {
     down: queryInterface => queryInterface.dropTable('users'),
     up: (queryInterface, Sequelize) =>
         queryInterface.createTable('users', {
+            code: {
+                type: Sequelize.STRING(8),
+            },
             created_at: {
                 type: Sequelize.DATE,
             },

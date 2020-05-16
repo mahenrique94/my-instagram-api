@@ -1,7 +1,7 @@
-const development = require('./development')
+const { getEnvironment } = require('../utils/env')
 
 const envs = {
-    development,
+    development: require('./development'),
 }
 
-module.exports = envs[process.env.API_ENV || 'development']
+module.exports = envs[getEnvironment()]

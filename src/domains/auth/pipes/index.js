@@ -1,7 +1,4 @@
-const existsEmail = require('./existsEmail')
-const existsUsername = require('./existsUsername')
-
 module.exports = {
-    existsEmail,
-    existsUsername,
+    existsEmail: require('./existsEmail'),
+    existsUsername: require('./existsUsername'),
 }

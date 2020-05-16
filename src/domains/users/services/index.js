@@ -1,7 +1,4 @@
-const findByEmail = require('./findByEmail')
-const findByUsername = require('./findByUsername')
-
 module.exports = {
-    findByEmail,
-    findByUsername,
+    findByEmail: require('./findByEmail'),
+    findByUsername: require('./findByUsername'),
 }

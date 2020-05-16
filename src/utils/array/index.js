@@ -1,5 +1,3 @@
-const isNotEmpty = require('./isNotEmpty')
-
 module.exports = {
-    isNotEmpty,
+    isNotEmpty: require('./isNotEmpty'),
 }
