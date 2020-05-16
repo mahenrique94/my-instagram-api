@@ -7,8 +7,15 @@ module.exports = {
         version: 'v1',
     },
     bull: {
-        host: '127.0.0.1',
-        password: process.env.MEMORY_DB_PASSWORD,
-        port: 6379,
+        board: {
+            host: 'localhost',
+            port: 8181,
+            protocol: 'http',
+        },
+        db: {
+            host: '127.0.0.1',
+            password: process.env.MEMORY_DB_PASSWORD,
+            port: 6379,
+        },
     },
 }

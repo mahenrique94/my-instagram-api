@@ -1,1 +1,1 @@
-require('./infrastructure/bootstrap')()
+require('./infrastructure/api/bootstrap')()

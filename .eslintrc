@@ -50,11 +50,11 @@
             {
                 "alphabetize": { "ignoreCase": true, "order": "asc" },
                 "groups": [
-                    "/^../config/",
+                    ["/^../config/", "/^../cfg/"],
                     ["/^../constants/", "/^./constants/"],
                     "/^../env/",
                     "module",
-                    ["/^../cfg/", "/^../i18n/", "/^../mocks/"],
+                    ["/^../i18n/", "/^../mocks/"],
                     "/^../utils/",
                     "/^../helpers/",
                     "parent",

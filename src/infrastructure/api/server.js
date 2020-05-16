@@ -1,4 +1,4 @@
-const applyRoutes = require('../config/routes')
+const applyRoutes = require('../../config/routes')
 
 const cors = require('@koa/cors')
 const Koa = require('koa')

@@ -1,6 +1,6 @@
-require('../config/env')
+require('../../config/env')
 
-const env = require('../env')
+const env = require('../../env')
 
 const server = require('./server')
 

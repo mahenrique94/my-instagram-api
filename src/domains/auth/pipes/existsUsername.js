@@ -13,7 +13,7 @@ module.exports = async ctx => {
             .withCode(codes.BAD_REQUEST)
             .withBody(Boom.badRequest, null, {
                 result: withMessage(ctx, 'errors.usernameInUse', {
-                    username: existsUsername.username
+                    username: existsUsername.username,
                 }),
             })
             .end()

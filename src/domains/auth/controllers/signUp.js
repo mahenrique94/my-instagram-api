@@ -23,5 +23,8 @@ const signUp = async ctx => {
 }
 
 module.exports = withDecorators({
-    pipeline: withPipeline([withValidations(validations.signUp), withAsyncPipes([pipes.existsEmail, pipes.existsUsername])]),
-})(signUp)
+    pipeline: withPipeline([
+        withValidations(validations.signUp),
+        withAsyncPipes([pipes.existsEmail, pipes.existsUsername, signUp, pipes.sendConfirmationEmail]),
+    ]),
+})
