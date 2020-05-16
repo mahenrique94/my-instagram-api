@@ -1,8 +1,14 @@
+const { getHeaderLanguage } = require('../../../utils/i18n')
 const emailQueues = require('../../emails/queues')
 
 module.exports = ctx => {
+    const { code, data } = ctx.state
+    const { email, name, username } = data
     emailQueues.signUp.queue.add({
-        email: ctx.state.data.email,
-        username: ctx.state.data.username,
+        code,
+        email,
+        language: getHeaderLanguage(ctx),
+        name,
+        username,
     })
 }

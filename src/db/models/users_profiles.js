@@ -1,7 +1,7 @@
 'use strict'
 module.exports = (sequelize, DataTypes) =>
     sequelize.define(
-        'users_profile',
+        'users_profiles',
         {
             biography: DataTypes.TEXT,
             gender: DataTypes.STRING(1),

@@ -1,3 +1,3 @@
-const repositories = require('../../users/repositories')
+const services = require('../../users/services')
 
-module.exports = ctx => repositories.create(ctx.request.body)
+module.exports = ctx => services.create(ctx.request.body)

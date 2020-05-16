@@ -18,4 +18,10 @@ module.exports = {
             port: 6379,
         },
     },
+    email: {
+        host: 'smtp.mailtrap.io',
+        password: process.env.EMAIL_PASSWORD,
+        port: 2525,
+        user: process.env.EMAIL_USER,
+    },
 }

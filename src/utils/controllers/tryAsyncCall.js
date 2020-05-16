@@ -7,6 +7,7 @@ module.exports = (asyncCall, ctx) => ({
                     ctx.state.data = result
                     handleSuccess()
                 } catch (e) {
+                    ctx.state.valid = false
                     ctx.state.error = e
                     handleError()
                 }

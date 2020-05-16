@@ -2,7 +2,7 @@
 module.exports = {
     down: queryInterface => queryInterface.dropTable('users_profile'),
     up: (queryInterface, Sequelize) =>
-        queryInterface.createTable('users_profile', {
+        queryInterface.createTable('users_profiles', {
             biography: {
                 type: Sequelize.TEXT,
             },
