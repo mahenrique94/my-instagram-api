@@ -1,5 +1,5 @@
-const authRoutes = require('../domains/auth/routes')
+const registerAuthRoutes = require('../domains/auth/registerRoutes')
 
 module.exports = router => {
-    authRoutes(router)
+    registerAuthRoutes(router)
 }

@@ -11,7 +11,7 @@ module.exports = withDecorators({
             pipes.signUp,
             pipes.createActivationCode,
             pipes.assignActivationCodeForUser,
-            pipes.sendConfirmationEmail,
+            pipes.sendSignUpEmail,
         ]),
     ]),
 })
