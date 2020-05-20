@@ -1,6 +1,6 @@
-const { validations } = require('../../../constants/validations')
-
 const Validator = require('fastest-validator')
+
+const { validations } = require('../../../constants/validations')
 
 module.exports = body => {
     const v = new Validator()
@@ -8,11 +8,11 @@ module.exports = body => {
         password: validations.password,
     }
 
-    if (body.hasOwnProperty('username')) {
+    if (body.username) {
         schema.username = validations.username
     }
 
-    if (body.hasOwnProperty('email')) {
+    if (body.email) {
         schema.email = validations.email
     }
 

@@ -1,6 +1,6 @@
-const env = require('../../env')
-
 const jwt = require('jsonwebtoken')
+
+const env = require('../../env')
 
 const removePrefix = require('./removePrefix')
 

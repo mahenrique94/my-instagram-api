@@ -1,4 +1,4 @@
-const services = require('../../users_profiles/services')
+const services = require('../../usersProfiles/services')
 const repositories = require('../repositories')
 
 module.exports = async body => {

@@ -3,6 +3,7 @@ const messages = {
         translations: {
             errors: {
                 emailInUse: 'The email {{email}} already in use',
+                unauthorized: 'You not have access to use this endpoint',
                 userNotFound: 'User not found in our database',
                 usernameInUse: 'The username {{username}} already in use',
             },

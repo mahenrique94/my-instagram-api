@@ -1,6 +1,6 @@
-const env = require('../../env')
-
 const nodemailer = require('nodemailer')
+
+const env = require('../../env')
 
 module.exports = async email => {
     const transporter = nodemailer.createTransport({

@@ -5,11 +5,11 @@ const { validations } = require('../../../constants/validations')
 module.exports = body => {
     const v = new Validator()
     const schema = {
-        confirmPassword: validations.confirmPassword,
-        email: validations.email,
+        biography: validations.biography,
+        gender: validations.gender,
         name: validations.name,
-        password: validations.password,
-        username: validations.username,
+        phone: validations.phone,
+        website: validations.website,
     }
     return v.validate(body, schema)
 }
