@@ -24,4 +24,8 @@ module.exports = {
         port: 2525,
         user: process.env.EMAIL_USER,
     },
+    token: {
+        prefix: 'Bearer ',
+        secret: process.env.TOKEN_SECRET,
+    },
 }

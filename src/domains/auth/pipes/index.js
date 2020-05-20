@@ -9,6 +9,8 @@ module.exports = {
     resendCode: require('./resendCode'),
     sendConfirmSignUpEmail: require('./sendConfirmSignUpEmail'),
     sendResendCodeEmail: require('./sendResendCodeEmail'),
+    sendSignInEmail: require('./sendSignInEmail'),
     sendSignUpEmail: require('./sendSignUpEmail'),
+    signIn: require('./signIn'),
     signUp: require('./signUp'),
 }

@@ -1,12 +1,12 @@
-const { patterns } = require('../../../constants/patterns')
+const { validations } = require('../../../constants/validations')
 
 const Validator = require('fastest-validator')
 
 module.exports = body => {
     const v = new Validator()
     const schema = {
-        code: { length: 6, pattern: patterns.NUMBERS_ONLY_SIX, type: 'string' },
-        email: { max: 255, min: 5, type: 'email' },
+        code: validations.code,
+        email: validations.email,
     }
     return v.validate(body, schema)
 }
