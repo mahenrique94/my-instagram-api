@@ -5,6 +5,7 @@ const messages = {
                 alreadyFollowingUser: 'You already following this user',
                 emailInUse: 'The email {{email}} already in use',
                 notFollowingUser: 'You not following this user',
+                passwordsAreDifferent: 'Password and confirm password are different',
                 tryingSelfFollow: 'You are trying follow yourself',
                 unauthorized: 'You not have access to use this endpoint',
                 userFollowNotFound: 'You are trying follow a user that not exists',

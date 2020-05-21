@@ -6,6 +6,7 @@ module.exports = withDecorators({
     pipeline: withPipeline([
         withValidations(validations.signUp),
         withAsyncPipes([
+            pipes.checkPasswordAndConfirmAreEquals,
             pipes.existsEmail,
             pipes.existsUsername,
             pipes.signUp,

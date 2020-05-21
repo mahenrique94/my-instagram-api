@@ -2,6 +2,7 @@ module.exports = {
     assignActivationCodeForUser: require('./assignActivationCodeForUser'),
     checkCodeAndEmail: require('./checkCodeAndEmail'),
     checkEmailHasCode: require('./checkEmailHasCode'),
+    checkPasswordAndConfirmAreEquals: require('./checkPasswordAndConfirmAreEquals'),
     confirmSignUp: require('./confirmSignUp'),
     createActivationCode: require('./createActivationCode'),
     existsEmail: require('./existsEmail'),
