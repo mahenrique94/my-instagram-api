@@ -1,6 +1,6 @@
 const cors = require('@koa/cors')
 const Koa = require('koa')
-const bodyParser = require('koa-bodyparser')
+const bodyParser = require('koa-body')
 const Router = require('koa-router')
 
 const applyRoutes = require('../../config/routes')
@@ -12,7 +12,10 @@ module.exports = () => {
 
     applyRoutes(router)
 
-    app.use(cors()).use(bodyParser()).use(router.routes()).use(router.allowedMethods())
+    app.use(cors())
+        .use(bodyParser({ formidable: { multiples: false }, multipart: true }))
+        .use(router.routes())
+        .use(router.allowedMethods())
 
     return app
 }

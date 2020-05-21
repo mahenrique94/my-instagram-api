@@ -1,6 +1,7 @@
 module.exports = {
     api: {
         host: 'localhost',
+        name: 'my-instagram',
         port: 8080,
         prefix: 'api',
         protocol: 'http',

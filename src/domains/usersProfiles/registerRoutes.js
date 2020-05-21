@@ -4,5 +4,7 @@ const { checkAuth } = require('../../utils/middlewares')
 const controllers = require('./controllers')
 
 module.exports = router => {
-    router.patch(`/${env.api.version}/${env.api.prefix}/users/:userId/profiles`, checkAuth, controllers.updateProfile)
+    router
+        .patch(`/${env.api.version}/${env.api.prefix}/users/:userId/profiles`, checkAuth, controllers.updateProfile)
+        .post(`/${env.api.version}/${env.api.prefix}/users/:userId/profiles/avatar`, checkAuth, controllers.updateAvatar)
 }
