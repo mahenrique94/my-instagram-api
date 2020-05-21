@@ -1,7 +1,7 @@
-const registerAuthRoutes = require('../domains/auth/registerRoutes')
-const registerUsersProfilesRoutes = require('../domains/usersProfiles/registerRoutes')
+const registerRoutes = [
+    require('../domains/auth/registerRoutes'),
+    require('../domains/usersFollowers/registerRoutes'),
+    require('../domains/usersProfiles/registerRoutes'),
+]
 
-module.exports = router => {
-    registerAuthRoutes(router)
-    registerUsersProfilesRoutes(router)
-}
+module.exports = router => registerRoutes.forEach(register => register(router))

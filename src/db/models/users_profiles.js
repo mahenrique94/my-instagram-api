@@ -12,7 +12,6 @@ module.exports = (sequelize, DataTypes) =>
             website: DataTypes.STRING(255),
         },
         {
-            paranoid: true,
             underscored: true,
         },
     )

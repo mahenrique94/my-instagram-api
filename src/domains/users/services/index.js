@@ -4,6 +4,7 @@ module.exports = {
     findByEmail: require('./findByEmail'),
     findByEmailAndCode: require('./findByEmailAndCode'),
     findByEmailOrUsernameAndPassword: require('./findByEmailOrUsernameAndPassword'),
+    findById: require('./findById'),
     findByUsername: require('./findByUsername'),
     updateVerificationCodeByEmail: require('./updateVerificationCodeByEmail'),
 }

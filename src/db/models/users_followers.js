@@ -7,7 +7,6 @@ module.exports = (sequelize, DataTypes) =>
             user_following_id: DataTypes.UUID,
         },
         {
-            paranoid: true,
             underscored: true,
         },
     )

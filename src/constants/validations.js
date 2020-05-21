@@ -6,6 +6,7 @@ const validations = {
     confirmPassword: { max: 16, min: 8, type: 'string' },
     email: { max: 255, min: 5, type: 'email' },
     gender: { optional: true, type: 'enum', values: ['M', 'F'] },
+    id: { type: 'uuid' },
     name: { max: 120, min: 1, type: 'string' },
     password: { max: 16, min: 8, type: 'string' },
     phone: { max: 30, optional: true, type: 'string' },

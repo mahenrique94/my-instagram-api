@@ -1,7 +1,5 @@
 require('../config/env')
 
-const registerEmailQueues = require('../domains/emails/registerQueues')
+const registerQueues = [require('../domains/emails/registerQueues')]
 
-module.exports = () => {
-    registerEmailQueues()
-}
+module.exports = () => registerQueues.forEach(register => register())
