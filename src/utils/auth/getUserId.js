@@ -1,1 +1,6 @@
-module.exports = token => token.payload.id
+const decodeToken = require('./decodeToken')
+
+module.exports = ctx => {
+    const token = decodeToken(ctx.request.header.authorization)
+    return token.payload.id
+}

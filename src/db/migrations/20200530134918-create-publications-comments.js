@@ -3,7 +3,7 @@ module.exports = {
     down: queryInterface => queryInterface.dropTable('publications_comments'),
     up: (queryInterface, Sequelize) =>
         queryInterface.createTable('publications_comments', {
-            createdAt: {
+            created_at: {
                 type: Sequelize.DATE,
             },
             describe: {
@@ -15,7 +15,7 @@ module.exports = {
             publication_id: {
                 type: Sequelize.UUID,
             },
-            updatedAt: {
+            updated_at: {
                 type: Sequelize.DATE,
             },
             user_id: {

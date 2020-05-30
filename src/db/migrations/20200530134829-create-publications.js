@@ -3,7 +3,7 @@ module.exports = {
     down: queryInterface => queryInterface.dropTable('publications'),
     up: (queryInterface, Sequelize) =>
         queryInterface.createTable('publications', {
-            createdAt: {
+            created_at: {
                 type: Sequelize.DATE,
             },
             describe: {
@@ -15,7 +15,7 @@ module.exports = {
             media: {
                 type: Sequelize.STRING(255),
             },
-            updatedAt: {
+            updated_at: {
                 type: Sequelize.DATE,
             },
             user_id: {
