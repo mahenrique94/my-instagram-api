@@ -3,6 +3,7 @@ const messages = {
         translations: {
             errors: {
                 alreadyFollowingUser: 'You already following this user',
+                alreadyLiked: 'You already like this publication',
                 emailInUse: 'The email {{email}} already in use',
                 notFollowingUser: 'You not following this user',
                 passwordsAreDifferent: 'Password and confirm password are different',
