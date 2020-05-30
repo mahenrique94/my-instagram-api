@@ -5,9 +5,12 @@ const { createResponse, tryAsyncCall } = require('../../../utils/controllers')
 const services = require('../services')
 
 module.exports = async ctx => {
-    await tryAsyncCall(services.remove, ctx)
+    await tryAsyncCall(services.create, ctx)
         .onSuccess(() => {
-            createResponse(ctx.response).withCode(codes.OK).end()
+            createResponse(ctx.response)
+                .withCode(codes.CREATED)
+                .withBody(() => ctx.state.data)
+                .end()
         })
         .onError(() => {
             createResponse(ctx.response)

@@ -1,6 +1,7 @@
 const registerRoutes = [
     require('../domains/auth/registerRoutes'),
     require('../domains/publications/registerRoutes'),
+    require('../domains/publicationsComments/registerRoutes'),
     require('../domains/usersFollowers/registerRoutes'),
     require('../domains/usersProfiles/registerRoutes'),
 ]
