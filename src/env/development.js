@@ -15,18 +15,18 @@ module.exports = {
         },
         db: {
             host: '127.0.0.1',
-            password: process.env.MEMORY_DB_PASSWORD,
+            password: process.env.MY_INSTAGRAM_API_MEMORY_DB_PASSWORD,
             port: 6379,
         },
     },
     email: {
         host: 'smtp.mailtrap.io',
-        password: process.env.EMAIL_PASSWORD,
+        password: process.env.MY_INSTAGRAM_API_EMAIL_PASSWORD,
         port: 2525,
-        user: process.env.EMAIL_USER,
+        user: process.env.MY_INSTAGRAM_API_EMAIL_USER,
     },
     token: {
         prefix: 'Bearer ',
-        secret: process.env.TOKEN_SECRET,
+        secret: process.env.MY_INSTAGRAM_API_TOKEN_SECRET,
     },
 }

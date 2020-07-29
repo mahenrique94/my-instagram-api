@@ -1,0 +1,30 @@
+image: node:latest
+
+before_script:
+  - npm ci
+
+stages:
+  - check
+  - test
+  - production
+
+check:
+  only:
+    - master
+  script:
+    - npm run lint
+  stage: check
+
+test:
+  only:
+    - master
+  script:
+    - npm t
+  stage: test
+
+production:
+  only:
+    - master
+  script:
+    - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_API_KEY
+  stage: production
