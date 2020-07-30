@@ -1,8 +1,6 @@
 build:
-  config:
-    NODE_ENV: production
   docker:
     web: Dockerfile
 
 run:
-  web: npm run db && npm start
+  web: NODE_ENV=production npm run db && npm start
