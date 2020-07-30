@@ -1,5 +1,8 @@
 image: node:latest
 
+variables:
+  NODE_ENV: production
+
 before_script:
   - npm ci
 
@@ -23,6 +26,7 @@ test:
   stage: test
 
 production:
+  before_script: []
   image: ruby:latest
   only:
     - master
