@@ -1,8 +1,5 @@
 image: node:latest
 
-variables:
-  NODE_ENV: production
-
 before_script:
   - npm ci
 
@@ -19,19 +16,19 @@ check:
     - npm run lint
   stage: check
 
-test:
-  only:
-    - master
-  script:
-    - npm t
-  stage: test
-
 db:
   only:
     - master
   script:
     - npm run db
   stage: db
+
+test:
+  only:
+    - master
+  script:
+    - npm t
+  stage: test
 
 production:
   before_script: []
@@ -44,3 +41,5 @@ production:
     - gem install dpl
     - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_API_KEY
   stage: production
+  variables:
+    NODE_ENV: production
