@@ -69,7 +69,6 @@
         "db:unmigrate": "sequelize db:migrate:undo:all",
         "db:unmigrate:last": "sequelize db:migrate:undo",
         "dev": "nodemon",
-        "heroku-postbuild": "npm run db",
         "jslint": "eslint .",
         "jslint:fix": "eslint . --fix",
         "lint": "npm run jslint",

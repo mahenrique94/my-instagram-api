@@ -1,11 +1,15 @@
 image: node:latest
 
+variables:
+  NODE_ENV: production
+
 before_script:
   - npm ci
 
 stages:
   - check
   - test
+  - db
   - production
 
 check:
@@ -21,6 +25,13 @@ test:
   script:
     - npm t
   stage: test
+
+db:
+  only:
+    - master
+  script:
+    - npm run db
+  stage: db
 
 production:
   before_script: []
