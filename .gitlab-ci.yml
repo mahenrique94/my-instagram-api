@@ -22,6 +22,8 @@ db:
   script:
     - npm run db
   stage: db
+  variables:
+    NODE_ENV: production
 
 test:
   only:
