@@ -1,4 +1,4 @@
-const Boom = require('Boom')
+const Boom = require('boom')
 
 const { codes } = require('../../constants/http')
 const { isNotEmpty } = require('../array')

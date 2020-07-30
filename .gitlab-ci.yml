@@ -6,7 +6,6 @@ before_script:
 stages:
   - check
   - test
-  - db
   - production
 
 check:
@@ -15,15 +14,6 @@ check:
   script:
     - npm run lint
   stage: check
-
-db:
-  only:
-    - master
-  script:
-    - npm run db
-  stage: db
-  variables:
-    NODE_ENV: production
 
 test:
   only:
