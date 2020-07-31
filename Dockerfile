@@ -1,5 +1,7 @@
 FROM node:erbium
 
+ENV NODE_ENV=production
+
 WORKDIR /www/api
 
 COPY package*.json ./
